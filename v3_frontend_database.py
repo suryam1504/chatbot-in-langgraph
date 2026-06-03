@@ -70,7 +70,7 @@ for message in st.session_state['message_history']:
     with st.chat_message(message['role']):
         st.text(message['content'])
 
-
+# following also makes sure that when we click on new chat in chatbot, in langsmith, "Threads" tab, it automatically creates separate threads for every new chat and stores only that thread's turns/traces
 CONFIG = {'configurable': {'thread_id': st.session_state['thread_id']}}
 
 user_input = st.chat_input('Type here')
