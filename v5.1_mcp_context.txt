@@ -1,0 +1,9 @@
+So we can make tools like duckduckgosearch (inbuilt) and calculator (custom) and weather (api) and connect it to our chatbots, but what if we wanted to connect Github or Drive or Jira or Slack, so that's where we would need to connect with their MCP servers.
+
+So here's all what we are going to do to connect our chatbot with an MCP server.
+
+So:
+
+1. Our chatbot acts as a host/client and Github (or anything else) acts as server. 
+2. In this case, we will make our own MCP client in Langgraph, which can talk to a MCP server.
+3. But we cannot write MCP servers in langgraph as for that we use the dedicated library FastMCP. 
