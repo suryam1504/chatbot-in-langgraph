@@ -76,7 +76,7 @@ print(result['messages'][-1].content)
 
 
 
-# So now the plan is: the tool that we have here, we will be replacing it with an MCP client which we will write, and this tool's code will be in the MCP server that we will write (essentially the mcp-math-demo-local server we made in the Learning-MCP repo), and then we will just connect the two.
+# So now the plan is: the tool that we have here, we will be replacing it with an MCP client which we will write, and this tool's code will be in the MCP server that we will write (essentially the mcp-math-local-server we made in the Learning-MCP repo), and then we will just connect the two.
 
 # Now before writing MCP client, we will do something: the current code and functions are synchronous (everything runs step by step in sequential manner), but with these MCP clients and servers (also with FastMCP which is used to build these), these need to be asynchronous (i.e. they can run in parallel and not wait for each other to finish), so we will first convert this code to be asynchronous.
 

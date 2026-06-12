@@ -139,4 +139,4 @@ if __name__ == '__main__':
 
 # Arrr matey! The sum of 5 and 3 be 8! Yarrr! 🏴‍☠️
 
-# ok so everything's working.
+# ok so everything's working. Now we will remove this tool code and write an MCP client. Before, let's just rewrite the math MCP server from Learning-MCP repo in this project too.
