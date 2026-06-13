@@ -6,4 +6,8 @@ So:
 
 1. Our chatbot acts as a host/client and Github (or anything else) acts as server. 
 2. In this case, we will make our own MCP client in Langgraph, which can talk to a MCP server.
-3. But we cannot write MCP servers in langgraph as for that we use the dedicated library FastMCP. 
+3. But we cannot write MCP servers in langgraph as for that we use the dedicated library FastMCP.
+4. So we write the MCP server using FastMCP where each tool is just a Python function with a @mcp.tool decorator, and it runs over stdio transport (meaning it launches as a subprocess and communicates via stdin/stdout).
+5. We connect to it from the chatbot backend using MultiServerMCPClient from langchain_mcp_adapters, which fetches the tools at runtime and makes them look exactly like regular LangChain tools to LangGraph.
+6. Since the MCP client is async, graph building and invocation also needs to be async using async/await and ainvoke.
+7. Frontend is pretty much the same, just uses .astream() function now instead of .stream() and some queuing.
