@@ -1,3 +1,5 @@
+# Frontend is pretty much the same, just uses .astream() function now instead of .stream() and some queuing
+
 import queue
 import uuid
 
